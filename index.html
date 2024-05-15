@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            text-align: center;
+            height: 40px;
+            width: 130px;
+            border-radius: 5px;
+            background-color:#198754;
+            color: white;
+            font-size: 16px;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+             }
+
+        button:hover{
+             border-color: white;
+             border-style: solid;
+            }
+             
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             }
+
+        div{
+            padding: 4px;
+            background-color: rgb(129, 190, 129);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body id="text">
+     <div>
+          <button class="button" onclick="Changebacgroung()">Change Color</button>
+     </div>
+     <script>
+            function Changebacgroung()
+        {
+            var letter="1234567890ABCDEF";
+            var changecolor="#";
+
+            for(var i=0; i<6; i++)
+            {
+                changecolor =changecolor+ letter[Math.floor(Math.random()*16)];
+            }
+
+            document.getElementById("text").style.backgroundColor=changecolor;
+            console.log(changecolor);
+            
+
+
+        }
+    </script>
+</body>
+</html>
